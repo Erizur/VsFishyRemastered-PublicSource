@@ -1,0 +1,39 @@
+{
+	"songs": [
+		[
+			"Fishy-Tank",
+			"dad",
+			[
+				255,
+				153,
+				95
+			]
+		],
+		[
+			"Underwater",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"storyName": "amazing fishe!!",
+	"weekName": "Fishy P1",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}
