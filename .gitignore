@@ -1,3 +1,7 @@
 export/
 .vscode/
 APIStuff.hx
+.DS_Store
+assets/.DS_Store
+assets/preload/.DS_Store
+assets/preload/data/.DS_Store
