@@ -341,13 +341,12 @@ class PlayState extends MusicBeatState
 
 			case 'petShop':
 
-				var posX = 0;
-				var posY = 0;
-
-				var bg:BGSprite = new BGSprite('fishy/PetShopBG', posX, posY);
+				var bg:BGSprite = new BGSprite('fishy/PetShopBG', -400, -100);
+				bg.setGraphicSize(Std.int(bg.width * 0.75));
+				bg.updateHitbox();
 				add(bg);
 
-				fishyAnimals = new BGSprite('fishy/dancingAnimals', posX, posY, 1, 1, ['dancingAnimals'], false);
+				fishyAnimals = new BGSprite('fishy/dancingAnimals', 150, 225, 1, 1, ['dancingAnimals'], false);
 				add(fishyAnimals);
 		}
 
