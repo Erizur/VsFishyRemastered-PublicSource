@@ -32,6 +32,24 @@
 				153,
 				95
 			]
+		],
+		[
+			"Less-Speech",
+			"bf",
+			[
+				49,
+				176,
+				209
+			]
+		],
+		[
+			"Unspeakable",
+			"voicebox",
+			[
+				80,
+				80,
+				80
+			]
 		]
 	],
 	"hideStoryMode": false,
