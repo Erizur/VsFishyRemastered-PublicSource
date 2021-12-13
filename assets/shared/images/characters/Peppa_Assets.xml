@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Peppa_Assets.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Peppa Down Note0000" x="15" y="15" width="314" height="373" frameX="0" frameY="-13" frameWidth="314" frameHeight="389"/>
+	<SubTexture name="Peppa Down Note0001" x="15" y="15" width="314" height="373" frameX="0" frameY="-13" frameWidth="314" frameHeight="389"/>
+	<SubTexture name="Peppa Down Note0002" x="344" y="15" width="297" height="389" frameX="-2" frameY="0" frameWidth="314" frameHeight="389"/>
+	<SubTexture name="Peppa Down Note0003" x="344" y="15" width="297" height="389" frameX="-2" frameY="0" frameWidth="314" frameHeight="389"/>
+	<SubTexture name="Peppa Down Note0004" x="344" y="15" width="297" height="389" frameX="-2" frameY="0" frameWidth="314" frameHeight="389"/>
+	<SubTexture name="Peppa Down Note0005" x="344" y="15" width="297" height="389" frameX="-2" frameY="0" frameWidth="314" frameHeight="389"/>
+	<SubTexture name="Peppa Down Note0006" x="344" y="15" width="297" height="389" frameX="-2" frameY="0" frameWidth="314" frameHeight="389"/>
+	<SubTexture name="Peppa Down Note0007" x="344" y="15" width="297" height="389" frameX="-2" frameY="0" frameWidth="314" frameHeight="389"/>
+	<SubTexture name="Peppa Down Note0008" x="344" y="15" width="297" height="389" frameX="-2" frameY="0" frameWidth="314" frameHeight="389"/>
+	<SubTexture name="Peppa Down Note0009" x="344" y="15" width="297" height="389" frameX="-2" frameY="0" frameWidth="314" frameHeight="389"/>
+	<SubTexture name="Peppa Down Note0010" x="344" y="15" width="297" height="389" frameX="-2" frameY="0" frameWidth="314" frameHeight="389"/>
+	<SubTexture name="Peppa Down Note0011" x="344" y="15" width="297" height="389" frameX="-2" frameY="0" frameWidth="314" frameHeight="389"/>
+	<SubTexture name="Peppa Idle0000" x="656" y="15" width="300" height="390" frameX="-14" frameY="-2" frameWidth="317" frameHeight="392"/>
+	<SubTexture name="Peppa Idle0001" x="656" y="15" width="300" height="390" frameX="-14" frameY="-2" frameWidth="317" frameHeight="392"/>
+	<SubTexture name="Peppa Idle0002" x="971" y="15" width="302" height="387" frameX="-13" frameY="-2" frameWidth="317" frameHeight="392"/>
+	<SubTexture name="Peppa Idle0003" x="971" y="15" width="302" height="387" frameX="-13" frameY="-2" frameWidth="317" frameHeight="392"/>
+	<SubTexture name="Peppa Idle0004" x="1288" y="15" width="308" height="378" frameX="-9" frameY="-3" frameWidth="317" frameHeight="392"/>
+	<SubTexture name="Peppa Idle0005" x="1611" y="15" width="315" height="361" frameX="-2" frameY="-3" frameWidth="317" frameHeight="392"/>
+	<SubTexture name="Peppa Idle0006" x="15" y="420" width="299" height="390" frameX="-4" frameY="0" frameWidth="317" frameHeight="392"/>
+	<SubTexture name="Peppa Idle0007" x="329" y="420" width="306" height="376" frameX="0" frameY="-13" frameWidth="317" frameHeight="392"/>
+	<SubTexture name="Peppa Idle0008" x="650" y="420" width="307" height="373" frameX="0" frameY="-15" frameWidth="317" frameHeight="392"/>
+	<SubTexture name="Peppa Idle0009" x="15" y="420" width="299" height="390" frameX="-4" frameY="0" frameWidth="317" frameHeight="392"/>
+	<SubTexture name="Peppa Left Note0000" x="972" y="420" width="307" height="395"/>
+	<SubTexture name="Peppa Left Note0001" x="972" y="420" width="307" height="395"/>
+	<SubTexture name="Peppa Left Note0002" x="1294" y="420" width="260" height="395" frameX="-29" frameY="0" frameWidth="307" frameHeight="395"/>
+	<SubTexture name="Peppa Left Note0003" x="1294" y="420" width="260" height="395" frameX="-29" frameY="0" frameWidth="307" frameHeight="395"/>
+	<SubTexture name="Peppa Left Note0004" x="1294" y="420" width="260" height="395" frameX="-29" frameY="0" frameWidth="307" frameHeight="395"/>
+	<SubTexture name="Peppa Left Note0005" x="1294" y="420" width="260" height="395" frameX="-29" frameY="0" frameWidth="307" frameHeight="395"/>
+	<SubTexture name="Peppa Left Note0006" x="1294" y="420" width="260" height="395" frameX="-29" frameY="0" frameWidth="307" frameHeight="395"/>
+	<SubTexture name="Peppa Left Note0007" x="1294" y="420" width="260" height="395" frameX="-29" frameY="0" frameWidth="307" frameHeight="395"/>
+	<SubTexture name="Peppa Left Note0008" x="1294" y="420" width="260" height="395" frameX="-29" frameY="0" frameWidth="307" frameHeight="395"/>
+	<SubTexture name="Peppa Left Note0009" x="1294" y="420" width="260" height="395" frameX="-29" frameY="0" frameWidth="307" frameHeight="395"/>
+	<SubTexture name="Peppa Left Note0010" x="1294" y="420" width="260" height="395" frameX="-29" frameY="0" frameWidth="307" frameHeight="395"/>
+	<SubTexture name="Peppa Left Note0011" x="1294" y="420" width="260" height="395" frameX="-29" frameY="0" frameWidth="307" frameHeight="395"/>
+	<SubTexture name="Peppa Right Note0000" x="1569" y="420" width="319" height="391"/>
+	<SubTexture name="Peppa Right Note0001" x="1569" y="420" width="319" height="391"/>
+	<SubTexture name="Peppa Right Note0002" x="15" y="830" width="270" height="389" frameX="0" frameY="-2" frameWidth="319" frameHeight="391"/>
+	<SubTexture name="Peppa Right Note0003" x="15" y="830" width="270" height="389" frameX="0" frameY="-2" frameWidth="319" frameHeight="391"/>
+	<SubTexture name="Peppa Right Note0004" x="15" y="830" width="270" height="389" frameX="0" frameY="-2" frameWidth="319" frameHeight="391"/>
+	<SubTexture name="Peppa Right Note0005" x="15" y="830" width="270" height="389" frameX="0" frameY="-2" frameWidth="319" frameHeight="391"/>
+	<SubTexture name="Peppa Right Note0006" x="15" y="830" width="270" height="389" frameX="0" frameY="-2" frameWidth="319" frameHeight="391"/>
+	<SubTexture name="Peppa Right Note0007" x="15" y="830" width="270" height="389" frameX="0" frameY="-2" frameWidth="319" frameHeight="391"/>
+	<SubTexture name="Peppa Right Note0008" x="15" y="830" width="270" height="389" frameX="0" frameY="-2" frameWidth="319" frameHeight="391"/>
+	<SubTexture name="Peppa Right Note0009" x="15" y="830" width="270" height="389" frameX="0" frameY="-2" frameWidth="319" frameHeight="391"/>
+	<SubTexture name="Peppa Right Note0010" x="15" y="830" width="270" height="389" frameX="0" frameY="-2" frameWidth="319" frameHeight="391"/>
+	<SubTexture name="Peppa Right Note0011" x="15" y="830" width="270" height="389" frameX="0" frameY="-2" frameWidth="319" frameHeight="391"/>
+	<SubTexture name="Peppa Up Note0000" x="300" y="830" width="290" height="412" frameX="-9" frameY="0" frameWidth="300" frameHeight="412"/>
+	<SubTexture name="Peppa Up Note0001" x="300" y="830" width="290" height="412" frameX="-9" frameY="0" frameWidth="300" frameHeight="412"/>
+	<SubTexture name="Peppa Up Note0002" x="605" y="830" width="300" height="396" frameX="0" frameY="-11" frameWidth="300" frameHeight="412"/>
+	<SubTexture name="Peppa Up Note0003" x="605" y="830" width="300" height="396" frameX="0" frameY="-11" frameWidth="300" frameHeight="412"/>
+	<SubTexture name="Peppa Up Note0004" x="605" y="830" width="300" height="396" frameX="0" frameY="-11" frameWidth="300" frameHeight="412"/>
+	<SubTexture name="Peppa Up Note0005" x="605" y="830" width="300" height="396" frameX="0" frameY="-11" frameWidth="300" frameHeight="412"/>
+	<SubTexture name="Peppa Up Note0006" x="605" y="830" width="300" height="396" frameX="0" frameY="-11" frameWidth="300" frameHeight="412"/>
+	<SubTexture name="Peppa Up Note0007" x="605" y="830" width="300" height="396" frameX="0" frameY="-11" frameWidth="300" frameHeight="412"/>
+	<SubTexture name="Peppa Up Note0008" x="605" y="830" width="300" height="396" frameX="0" frameY="-11" frameWidth="300" frameHeight="412"/>
+	<SubTexture name="Peppa Up Note0009" x="605" y="830" width="300" height="396" frameX="0" frameY="-11" frameWidth="300" frameHeight="412"/>
+	<SubTexture name="Peppa Up Note0010" x="605" y="830" width="300" height="396" frameX="0" frameY="-11" frameWidth="300" frameHeight="412"/>
+	<SubTexture name="Peppa Up Note0011" x="605" y="830" width="300" height="396" frameX="0" frameY="-11" frameWidth="300" frameHeight="412"/>
+</TextureAtlas>
