@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-40,
+				120
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "VoiceBox Idle"
+		},
+		{
+			"offsets": [
+				-14,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "VoiceBox Right Note"
+		},
+		{
+			"offsets": [
+				1,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "VoiceBox Left Note"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "VoiceBox Down Note"
+		},
+		{
+			"offsets": [
+				-6,
+				5
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "VoiceBox Up Note"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/voiceBoxAssets",
+	"position": [
+		0,
+		390
+	],
+	"healthicon": "voicebox",
+	"flip_x": false,
+	"healthbar_colors": [
+		80,
+		80,
+		80
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

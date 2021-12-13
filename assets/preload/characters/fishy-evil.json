@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "EvilFish Idle"
+		},
+		{
+			"offsets": [
+				-14,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "EvilFish Right Note"
+		},
+		{
+			"offsets": [
+				-6,
+				5
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "EvilFish Up Note"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "EvilFish Down Note"
+		},
+		{
+			"offsets": [
+				2,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "EvilFish Left Note"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Fishy_Evil_Assets",
+	"position": [
+		0,
+		390
+	],
+	"healthicon": "fishy",
+	"flip_x": false,
+	"healthbar_colors": [
+		235,
+		135,
+		0
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
