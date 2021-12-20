@@ -2159,7 +2159,7 @@ class PlayState extends MusicBeatState
 
 				storyPlaylist.remove(storyPlaylist[0]);
 
-				if (storyPlaylist.length <= 0)
+				if (storyPlaylist.length <= 0 || Paths.formatToSongPath(SONG.song) == 'less-speech' || Paths.formatToSongPath(SONG.song) == 'unspeakable')
 				{
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
@@ -2188,23 +2188,45 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					var difficulty:String = '' + CoolUtil.difficultyStuff[storyDifficulty][3];
+					if(Paths.formatToSongPath(SONG.song) != 'underwater'){
+						var difficulty:String = '';
 
-					trace('LOADING NEXT SONG');
-					trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + difficulty);
+						trace('LOADING NEXT SONG');
+						trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + difficulty);
+	
+						FlxTransitionableState.skipNextTransIn = true;
+						FlxTransitionableState.skipNextTransOut = true;
+	
+						prevCamFollow = camFollow;
+						prevCamFollowPos = camFollowPos;
+	
+						PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
+						FlxG.sound.music.stop();
+	
+						cancelFadeTween();
+						//resetSpriteCache = true;
+						LoadingState.loadAndSwitchState(new PlayState());
+					}
+					else{
+						var difficulty:String = '';
+						var randomNum:Int = FlxG.random.int(0,1);
 
-					FlxTransitionableState.skipNextTransIn = true;
-					FlxTransitionableState.skipNextTransOut = true;
-
-					prevCamFollow = camFollow;
-					prevCamFollowPos = camFollowPos;
-
-					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
-					FlxG.sound.music.stop();
-
-					cancelFadeTween();
-					//resetSpriteCache = true;
-					LoadingState.loadAndSwitchState(new PlayState());
+						trace('LOADING RANDOM FISHY P1 ENDING SONG');
+						trace(Paths.formatToSongPath(PlayState.storyPlaylist[randomNum]) + difficulty);
+	
+						FlxTransitionableState.skipNextTransIn = true;
+						FlxTransitionableState.skipNextTransOut = true;
+	
+						prevCamFollow = camFollow;
+						prevCamFollowPos = camFollowPos;
+	
+						PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[randomNum] + difficulty, PlayState.storyPlaylist[randomNum]);
+						FlxG.sound.music.stop();
+	
+						cancelFadeTween();
+						//resetSpriteCache = true;
+						LoadingState.loadAndSwitchState(new PlayState());
+					}
 				}
 			}
 			else
