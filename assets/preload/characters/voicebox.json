@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
 				-40,
 				120
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": true,
-			"name": "VoiceBox Idle"
+			"fps": 24,
+			"name": "VoiceBox Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				-14,
-				0
+				-74,
+				-40
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "VoiceBox Right Note"
+			"fps": 24,
+			"name": "VoiceBox Right Note",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				1,
-				0
+				21,
+				-50
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "VoiceBox Left Note"
+			"fps": 24,
+			"name": "VoiceBox Left Note",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				0,
-				0
+				-20,
+				-80
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "VoiceBox Down Note"
+			"fps": 24,
+			"name": "VoiceBox Down Note",
+			"indices": []
 		},
 		{
-			"offsets": [
-				-6,
-				5
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singUP",
 			"loop": false,
-			"name": "VoiceBox Up Note"
+			"offsets": [
+				24,
+				-113
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "VoiceBox Up Note",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/voiceBoxAssets",
 	"position": [
 		0,
-		405
+		415
 	],
 	"healthicon": "voicebox",
 	"flip_x": false,
