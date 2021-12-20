@@ -340,7 +340,6 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'petShop':
-
 				var bg:BGSprite = new BGSprite('fishy/PetShopBG', -400, -100);
 				bg.setGraphicSize(Std.int(bg.width * 0.75));
 				bg.updateHitbox();
@@ -348,6 +347,11 @@ class PlayState extends MusicBeatState
 
 				fishyAnimals = new BGSprite('fishy/dancingAnimals', 150, 225, 1, 1, ['dancingAnimals'], false);
 				add(fishyAnimals);
+			case 'petShop-destroy':
+				var bg:BGSprite = new BGSprite('fishy/PetShopBG_Destroyed', -400, -100);
+				bg.setGraphicSize(Std.int(bg.width * 0.75));
+				bg.updateHitbox();
+				add(bg);
 		}
 
 

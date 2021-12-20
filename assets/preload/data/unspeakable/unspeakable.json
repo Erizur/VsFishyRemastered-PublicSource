@@ -4151,7 +4151,7 @@
 		"player2": "voicebox",
 		"player3": "gf",
 		"song": "Unspeakable",
-		"stage": "petShop",
+		"stage": "petShop-destroy",
 		"arrowSkin": "",
 		"validScore": true,
 		"sections": 0,
