@@ -60,7 +60,7 @@
 	"image": "characters/voiceBoxAssets",
 	"position": [
 		0,
-		390
+		405
 	],
 	"healthicon": "voicebox",
 	"flip_x": false,
