@@ -218,6 +218,8 @@ class PlayState extends MusicBeatState
 	private var luaDebugGroup:FlxTypedGroup<DebugLuaText>;
 	public var introSoundsSuffix:String = '';
 
+	public var speedNumb:Float;
+
 	override public function create()
 	{
 		#if MODS_ALLOWED
@@ -347,11 +349,20 @@ class PlayState extends MusicBeatState
 
 				fishyAnimals = new BGSprite('fishy/dancingAnimals', 150, 225, 1, 1, ['dancingAnimals'], false);
 				add(fishyAnimals);
+
+				SONG.speed = FlxG.random.float(3.1, 3.6);
+				speedNumb = SONG.speed;
+				trace('scroll speed: ' + speedNumb);
+
 			case 'petShop-destroy':
 				var bg:BGSprite = new BGSprite('fishy/PetShopBG_Destroyed', -400, -100);
 				bg.setGraphicSize(Std.int(bg.width * 0.75));
 				bg.updateHitbox();
 				add(bg);
+
+				SONG.speed = FlxG.random.float(3.3, 3.7);
+				speedNumb = SONG.speed;
+				trace('scroll speed: ' + speedNumb);
 		}
 
 
