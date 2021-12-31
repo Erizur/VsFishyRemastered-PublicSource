@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ParkFence.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ParkBG20000" x="15" y="15" width="1942" height="386" frameX="0" frameY="-21" frameWidth="1942" frameHeight="407"/>
+	<SubTexture name="ParkBG20001" x="15" y="15" width="1942" height="386" frameX="0" frameY="-21" frameWidth="1942" frameHeight="407"/>
+	<SubTexture name="ParkBG20002" x="15" y="15" width="1942" height="386" frameX="0" frameY="-21" frameWidth="1942" frameHeight="407"/>
+	<SubTexture name="ParkBG20003" x="15" y="416" width="1942" height="407"/>
+	<SubTexture name="ParkBG20004" x="15" y="416" width="1942" height="407"/>
+	<SubTexture name="ParkBG20005" x="15" y="416" width="1942" height="407"/>
+	<SubTexture name="ParkBG20006" x="15" y="416" width="1942" height="407"/>
+	<SubTexture name="ParkBG20007" x="15" y="838" width="1942" height="358" frameX="0" frameY="-49" frameWidth="1942" frameHeight="407"/>
+	<SubTexture name="ParkBG20008" x="15" y="838" width="1942" height="358" frameX="0" frameY="-49" frameWidth="1942" frameHeight="407"/>
+	<SubTexture name="ParkBG20009" x="15" y="838" width="1942" height="358" frameX="0" frameY="-49" frameWidth="1942" frameHeight="407"/>
+	<SubTexture name="ParkBG20010" x="15" y="1211" width="1942" height="365" frameX="0" frameY="-42" frameWidth="1942" frameHeight="407"/>
+	<SubTexture name="ParkBG20011" x="15" y="1211" width="1942" height="365" frameX="0" frameY="-42" frameWidth="1942" frameHeight="407"/>
+	<SubTexture name="ParkBG20012" x="15" y="1211" width="1942" height="365" frameX="0" frameY="-42" frameWidth="1942" frameHeight="407"/>
+	<SubTexture name="ParkBG20013" x="15" y="1211" width="1942" height="365" frameX="0" frameY="-42" frameWidth="1942" frameHeight="407"/>
+	<SubTexture name="ParkBG20014" x="15" y="1211" width="1942" height="365" frameX="0" frameY="-42" frameWidth="1942" frameHeight="407"/>
+</TextureAtlas>

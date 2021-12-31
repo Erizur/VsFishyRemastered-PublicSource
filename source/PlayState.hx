@@ -178,6 +178,7 @@ class PlayState extends MusicBeatState
 	var dialogueJson:DialogueFile = null;
 
 	var fishyAnimals:BGSprite;
+	var fence:BGSprite;
 
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
@@ -347,7 +348,7 @@ class PlayState extends MusicBeatState
 				bg.updateHitbox();
 				add(bg);
 
-				fishyAnimals = new BGSprite('fishy/dancingAnimals', 150, 225, 1, 1, ['dancingAnimals'], false);
+				fishyAnimals = new BGSprite('fishy/dancingAnimals', 150, 225, 1, 1, ['dancingAnimals'], true);
 				add(fishyAnimals);
 
 				SONG.speed = FlxG.random.float(3.1, 3.6);
@@ -361,6 +362,30 @@ class PlayState extends MusicBeatState
 				add(bg);
 
 				SONG.speed = FlxG.random.float(3.3, 3.7);
+				speedNumb = SONG.speed;
+				trace('scroll speed: ' + speedNumb);
+			case 'park-day':
+				var bg:BGSprite = new BGSprite('fishy/ParkBG1_Day', -350, -50);
+				bg.updateHitbox();
+				add(bg);
+
+				fence = new BGSprite('fishy/ParkFence', -150, 350, 1, 1, ['ParkBG2'], false);
+				add(fence);
+
+				var trees:BGSprite = new BGSprite('fishy/ParkBG3', -350, -250);
+				trees.updateHitbox();
+				add(trees);
+
+				SONG.speed = FlxG.random.float(3.1, 3.6);
+				speedNumb = SONG.speed;
+				trace('scroll speed: ' + speedNumb);
+			case 'park-night':
+				var bg:BGSprite = new BGSprite('fishy/ParkBG1_Night', -350, -50);
+				bg.setGraphicSize(Std.int(bg.width * 0.75));
+				bg.updateHitbox();
+				add(bg);
+
+				SONG.speed = FlxG.random.float(3.5, 3.9);
 				speedNumb = SONG.speed;
 				trace('scroll speed: ' + speedNumb);
 		}
