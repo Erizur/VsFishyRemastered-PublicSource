@@ -349,7 +349,7 @@ class PlayState extends MusicBeatState
 				add(bg);
 
 				fishyAnimals = new BGSprite('fishy/dancingAnimals', 150, 225, 1, 1, ['dancingAnimals'], true);
-				fishyAnimals.dance(true);
+				fishyAnimals.dance();
 				add(fishyAnimals);
 
 				SONG.speed = FlxG.random.float(3.1, 3.6);
@@ -370,13 +370,13 @@ class PlayState extends MusicBeatState
 				bg.updateHitbox();
 				add(bg);
 
-				fence = new BGSprite('fishy/ParkFence', -250, 350, 1, 1, ['ParkBG2'], false);
-				fence.dance(true);
-				add(fence);
-
-				var trees:BGSprite = new BGSprite('fishy/ParkBG3', -350, -200);
+				var trees:BGSprite = new BGSprite('fishy/ParkBG3', -350, -220);
 				trees.updateHitbox();
 				add(trees);
+
+				fence = new BGSprite('fishy/ParkFence', -250, 350, 1, 1, ['ParkBG2'], false);
+				fence.dance();
+				add(fence);
 
 				SONG.speed = FlxG.random.float(3.1, 3.6);
 				speedNumb = SONG.speed;
