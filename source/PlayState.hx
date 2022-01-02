@@ -349,8 +349,19 @@ class PlayState extends MusicBeatState
 				add(bg);
 
 				fishyAnimals = new BGSprite('fishy/dancingAnimals', 150, 225, 1, 1, ['dancingAnimals'], true);
-				fishyAnimals.dance();
+				fishyAnimals.dance(true);
 				add(fishyAnimals);
+
+				if(Paths.formatToSongPath(SONG.song) == 'less-speech'){
+					boyfriendGroup.x = DAD_X;
+					boyfriendGroup.y = DAD_Y;
+					dadGroup.x = BF_X;
+					dadGroup.y = BF_Y;
+					cameraSpeed = 0;
+				}
+				else{
+					cameraSpeed = 1;
+				}
 
 				SONG.speed = FlxG.random.float(3.1, 3.6);
 				speedNumb = SONG.speed;
@@ -375,7 +386,7 @@ class PlayState extends MusicBeatState
 				add(trees);
 
 				fence = new BGSprite('fishy/ParkFence', -250, 350, 1, 1, ['ParkBG2'], false);
-				fence.dance();
+				fence.dance(true);
 				add(fence);
 
 				SONG.speed = FlxG.random.float(3.1, 3.6);
@@ -383,7 +394,7 @@ class PlayState extends MusicBeatState
 				trace('scroll speed: ' + speedNumb);
 			case 'park-night':
 				var bg:BGSprite = new BGSprite('fishy/ParkBG1_Night', -350, -50);
-				bg.setGraphicSize(Std.int(bg.width * 0.75));
+				bg.setGraphicSize(Std.int(bg.width * 1.25));
 				bg.updateHitbox();
 				add(bg);
 
@@ -2953,8 +2964,10 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
-			case 'petShop':
-				fishyAnimals.dance(true);
+			//case 'petShop':
+			//	fishyAnimals.dance(true);
+			//case 'park-day':
+			//	fence.dance(true);
 		}
 		lastBeatHit = curBeat;
 
@@ -3050,11 +3063,6 @@ class PlayState extends MusicBeatState
 							Achievements.unlockAchievement(arrayIDs[i]);
 							return arrayIDs[i];
 						}
-					case 10:
-						if(Achievements.henchmenDeath >= 100) {
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
 					case 11:
 						if(boyfriend.holdTimer >= 20 && !usedPractice) {
 							Achievements.unlockAchievement(arrayIDs[i]);
@@ -3079,11 +3087,6 @@ class PlayState extends MusicBeatState
 						}
 					case 14:
 						if(/*ClientPrefs.framerate <= 60 &&*/ ClientPrefs.lowQuality && !ClientPrefs.globalAntialiasing && !ClientPrefs.imagesPersist) {
-							Achievements.unlockAchievement(arrayIDs[i]);
-							return arrayIDs[i];
-						}
-					case 15:
-						if(Paths.formatToSongPath(SONG.song) == 'test' && !usedPractice) {
 							Achievements.unlockAchievement(arrayIDs[i]);
 							return arrayIDs[i];
 						}

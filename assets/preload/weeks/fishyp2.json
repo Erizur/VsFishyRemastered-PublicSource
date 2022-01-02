@@ -1,0 +1,48 @@
+{
+	"storyName": "fishe in the park!!!",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "fishyp1",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"songs": [
+		[
+			"Walkeing",
+			"fishy",
+			[
+				255,
+				153,
+				95
+			]
+		],
+		[
+			"Refreshed",
+			"fishy",
+			[
+				255,
+				153,
+				95
+			]
+		],
+		[
+			"Fish-Box",
+			"fishy-evil",
+			[
+				80,
+				80,
+				80
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Fishy P2"
+}
