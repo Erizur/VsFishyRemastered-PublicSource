@@ -1409,16 +1409,19 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		super.update(elapsed);
+		floatshit += 0.1;
+		bfloat += 0.12;
+		gfloat += 0.15;
 
-		floatshit += 0.9;
-		bfloat += 0.8;
-		gfloat += 0.7;
+		super.update(elapsed);
 
 		if(curStage == "park-night"){
 			dad.y += Math.sin(floatshit);
+			dad.x += Math.sin(bfloat);
 			boyfriend.y += Math.sin(bfloat);
+			boyfriend.x += Math.sin(gfloat);
 			gf.y += Math.sin(gfloat);
+			gf.x += Math.sin(floatshit);
 		}
 
 		if(ratingString == '?') {
