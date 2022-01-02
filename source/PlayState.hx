@@ -217,6 +217,9 @@ class PlayState extends MusicBeatState
 
 	// Lua shit
 	private var luaDebugGroup:FlxTypedGroup<DebugLuaText>;
+	private var floatshit:Float = 0;
+	private var bfloat:Float = 0;
+	private var gfloat:Float = 0;
 	public var introSoundsSuffix:String = '';
 
 	public var speedNumb:Float;
@@ -1407,6 +1410,16 @@ class PlayState extends MusicBeatState
 		}
 
 		super.update(elapsed);
+
+		floatshit += 0.9;
+		bfloat += 0.8;
+		gfloat += 0.7;
+
+		if(curStage == "park-night"){
+			dad.y += Math.sin(floatshit);
+			boyfriend.y += Math.sin(bfloat);
+			gf.y += Math.sin(gfloat);
+		}
 
 		if(ratingString == '?') {
 			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingString;

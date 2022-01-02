@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "EvilFish Idle"
+			"fps": 24,
+			"name": "EvilFish Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-14,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "EvilFish Right Note"
+			"fps": 24,
+			"name": "EvilFish Right Note",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-6,
 				5
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
-			"name": "EvilFish Up Note"
+			"fps": 24,
+			"name": "EvilFish Up Note",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "EvilFish Down Note"
+			"fps": 24,
+			"name": "EvilFish Down Note",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				2,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "EvilFish Left Note"
+			"fps": 24,
+			"name": "EvilFish Left Note",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
@@ -70,7 +70,7 @@
 		0
 	],
 	"camera_position": [
-		0,
+		50,
 		0
 	],
 	"sing_duration": 6.1,
