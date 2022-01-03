@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sadfish.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Fish Down Note 0000" x="0" y="0" width="465" height="317" frameX="0" frameY="-14" frameWidth="465" frameHeight="331"/>
+	<SubTexture name="Fish Down Note 0001" x="0" y="0" width="465" height="317" frameX="0" frameY="-14" frameWidth="465" frameHeight="331"/>
+	<SubTexture name="Fish Down Note 0002" x="465" y="0" width="452" height="323" frameX="-7" frameY="-8" frameWidth="465" frameHeight="331"/>
+	<SubTexture name="Fish Down Note 0003" x="917" y="0" width="453" height="331" frameX="-1" frameY="0" frameWidth="465" frameHeight="331"/>
+	<SubTexture name="Fish Down Note 0004" x="1370" y="0" width="453" height="331" frameX="-1" frameY="0" frameWidth="465" frameHeight="331"/>
+	<SubTexture name="Fish Down Note 0005" x="1370" y="0" width="453" height="331" frameX="-1" frameY="0" frameWidth="465" frameHeight="331"/>
+	<SubTexture name="Fish Down Note 0006" x="1823" y="0" width="453" height="331" frameX="-1" frameY="0" frameWidth="465" frameHeight="331"/>
+	<SubTexture name="Fish Down Note 0007" x="2276" y="0" width="453" height="331" frameX="-1" frameY="0" frameWidth="465" frameHeight="331"/>
+	<SubTexture name="Fish Down Note 0008" x="2729" y="0" width="453" height="331" frameX="-1" frameY="0" frameWidth="465" frameHeight="331"/>
+	<SubTexture name="Fish Idle0000" x="3182" y="0" width="453" height="331" frameX="-5" frameY="0" frameWidth="464" frameHeight="331"/>
+	<SubTexture name="Fish Idle0001" x="3635" y="0" width="453" height="331" frameX="-5" frameY="0" frameWidth="464" frameHeight="331"/>
+	<SubTexture name="Fish Idle0002" x="0" y="331" width="453" height="331" frameX="-5" frameY="0" frameWidth="464" frameHeight="331"/>
+	<SubTexture name="Fish Idle0003" x="453" y="331" width="453" height="331" frameX="-5" frameY="0" frameWidth="464" frameHeight="331"/>
+	<SubTexture name="Fish Idle0004" x="906" y="331" width="453" height="331" frameX="-5" frameY="0" frameWidth="464" frameHeight="331"/>
+	<SubTexture name="Fish Idle0005" x="1359" y="331" width="464" height="319" frameX="0" frameY="-12" frameWidth="464" frameHeight="331"/>
+	<SubTexture name="Fish Idle0006" x="1823" y="331" width="462" height="322" frameX="-1" frameY="-9" frameWidth="464" frameHeight="331"/>
+	<SubTexture name="Fish Idle0007" x="2285" y="331" width="460" height="324" frameX="-2" frameY="-7" frameWidth="464" frameHeight="331"/>
+	<SubTexture name="Fish Idle0008" x="2745" y="331" width="458" height="327" frameX="-3" frameY="-4" frameWidth="464" frameHeight="331"/>
+	<SubTexture name="Fish Idle0009" x="3203" y="331" width="455" height="329" frameX="-4" frameY="-2" frameWidth="464" frameHeight="331"/>
+	<SubTexture name="Fish Idle0010" x="3182" y="0" width="453" height="331" frameX="-5" frameY="0" frameWidth="464" frameHeight="331"/>
+	<SubTexture name="Fish Left Note0000" x="0" y="662" width="453" height="331" frameX="0" frameY="0" frameWidth="466" frameHeight="331"/>
+	<SubTexture name="Fish Left Note0001" x="0" y="662" width="453" height="331" frameX="0" frameY="0" frameWidth="466" frameHeight="331"/>
+	<SubTexture name="Fish Left Note0002" x="453" y="662" width="453" height="331" frameX="-13" frameY="0" frameWidth="466" frameHeight="331"/>
+	<SubTexture name="Fish Left Note0003" x="906" y="662" width="453" height="331" frameX="-13" frameY="0" frameWidth="466" frameHeight="331"/>
+	<SubTexture name="Fish Left Note0004" x="1359" y="662" width="453" height="331" frameX="-13" frameY="0" frameWidth="466" frameHeight="331"/>
+	<SubTexture name="Fish Left Note0005" x="1812" y="662" width="453" height="331" frameX="-13" frameY="0" frameWidth="466" frameHeight="331"/>
+	<SubTexture name="Fish Left Note0006" x="2265" y="662" width="453" height="331" frameX="-13" frameY="0" frameWidth="466" frameHeight="331"/>
+	<SubTexture name="Fish Left Note0007" x="2718" y="662" width="453" height="331" frameX="-13" frameY="0" frameWidth="466" frameHeight="331"/>
+	<SubTexture name="Fish Left Note0008" x="3171" y="662" width="453" height="331" frameX="-13" frameY="0" frameWidth="466" frameHeight="331"/>
+	<SubTexture name="Fish Right Note0000" x="3624" y="662" width="452" height="331" frameX="-26" frameY="0" frameWidth="478" frameHeight="331"/>
+	<SubTexture name="Fish Right Note0001" x="3624" y="662" width="452" height="331" frameX="-26" frameY="0" frameWidth="478" frameHeight="331"/>
+	<SubTexture name="Fish Right Note0002" x="0" y="993" width="452" height="331" frameX="-18" frameY="0" frameWidth="478" frameHeight="331"/>
+	<SubTexture name="Fish Right Note0003" x="452" y="993" width="453" height="331" frameX="0" frameY="0" frameWidth="478" frameHeight="331"/>
+	<SubTexture name="Fish Right Note0004" x="905" y="993" width="453" height="331" frameX="0" frameY="0" frameWidth="478" frameHeight="331"/>
+	<SubTexture name="Fish Right Note0005" x="1358" y="993" width="453" height="331" frameX="0" frameY="0" frameWidth="478" frameHeight="331"/>
+	<SubTexture name="Fish Right Note0006" x="1811" y="993" width="453" height="331" frameX="0" frameY="0" frameWidth="478" frameHeight="331"/>
+	<SubTexture name="Fish Right Note0007" x="1811" y="993" width="453" height="331" frameX="0" frameY="0" frameWidth="478" frameHeight="331"/>
+	<SubTexture name="Fish Right Note0008" x="2264" y="993" width="453" height="331" frameX="0" frameY="0" frameWidth="478" frameHeight="331"/>
+	<SubTexture name="Fish Up Note0000" x="2717" y="993" width="440" height="341" frameX="-7" frameY="0" frameWidth="453" frameHeight="341"/>
+	<SubTexture name="Fish Up Note0001" x="2717" y="993" width="440" height="341" frameX="-7" frameY="0" frameWidth="453" frameHeight="341"/>
+	<SubTexture name="Fish Up Note0002" x="3157" y="993" width="453" height="331" frameX="0" frameY="-10" frameWidth="453" frameHeight="341"/>
+	<SubTexture name="Fish Up Note0003" x="3610" y="993" width="453" height="331" frameX="0" frameY="-10" frameWidth="453" frameHeight="341"/>
+	<SubTexture name="Fish Up Note0004" x="0" y="1334" width="453" height="331" frameX="0" frameY="-10" frameWidth="453" frameHeight="341"/>
+	<SubTexture name="Fish Up Note0005" x="453" y="1334" width="453" height="331" frameX="0" frameY="-10" frameWidth="453" frameHeight="341"/>
+	<SubTexture name="Fish Up Note0006" x="906" y="1334" width="453" height="331" frameX="0" frameY="-10" frameWidth="453" frameHeight="341"/>
+	<SubTexture name="Fish Up Note0007" x="906" y="1334" width="453" height="331" frameX="0" frameY="-10" frameWidth="453" frameHeight="341"/>
+	<SubTexture name="Fish Up Note0008" x="1359" y="1334" width="453" height="331" frameX="0" frameY="-10" frameWidth="453" frameHeight="341"/>
+</TextureAtlas>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="fishySad_BG.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Fish Sad0000" x="15" y="15" width="453" height="331"/>
+	<SubTexture name="Fish Sad0001" x="483" y="15" width="453" height="331"/>
+	<SubTexture name="Fish Sad0002" x="951" y="15" width="453" height="331"/>
+	<SubTexture name="Fish Sad0003" x="1419" y="15" width="453" height="331"/>
+	<SubTexture name="Fish Sad0004" x="15" y="361" width="453" height="331"/>
+	<SubTexture name="Fish Sad0005" x="483" y="361" width="453" height="331"/>
+	<SubTexture name="Fish Sad0006" x="951" y="361" width="453" height="331"/>
+	<SubTexture name="Fish Sad0007" x="1419" y="361" width="453" height="331"/>
+	<SubTexture name="Fish Sad0008" x="15" y="707" width="453" height="331"/>
+	<SubTexture name="Fish Sad0009" x="483" y="707" width="453" height="331"/>
+	<SubTexture name="Fish Sad0010" x="951" y="707" width="453" height="331"/>
+</TextureAtlas>
