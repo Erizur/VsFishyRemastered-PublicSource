@@ -380,7 +380,7 @@ class PlayState extends MusicBeatState
 				speedNumb = SONG.speed;
 				trace('scroll speed: ' + speedNumb);
 			case 'park-day':
-				var bg:BGSprite = new BGSprite('fishy/ParkBG1_Day', -350, -50);
+				var bg:BGSprite = new BGSprite('fishy/ParkBG1_Day', -350, -245);
 				bg.setGraphicSize(Std.int(bg.width * 1.25));
 				bg.updateHitbox();
 				add(bg);
@@ -1851,44 +1851,48 @@ class PlayState extends MusicBeatState
 	function doDeathCheck() {
 		if (health <= 0 && !practiceMode && !isDead)
 		{
-			if (Paths.formatToSongPath(SONG.song) == 'refreshed' && isStoryMode == true)
-				{
-					if (curBeat >= 364)
-					{
-						endSong();
-					}
-				}
-			else{
 				var ret:Dynamic = callOnLuas('onGameOver', []);
 				if(ret != FunkinLua.Function_Stop) {
-					boyfriend.stunned = true;
-					deathCounter++;
+					if (Paths.formatToSongPath(SONG.song) == 'refreshed' && isStoryMode == true)
+						{
+							if (curBeat >= 364)
+							{
+								storyPlaylist.remove(storyPlaylist[0]);
+								PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0], PlayState.storyPlaylist[0]);
+								FlxG.switchState(new PlayState());
+								return false;
+							}
+						}
+					else{
+						boyfriend.stunned = true;
+						deathCounter++;
 	
-					persistentUpdate = false;
-					persistentDraw = false;
-					paused = true;
+						persistentUpdate = false;
+						persistentDraw = false;
+						paused = true;
 	
-					vocals.stop();
-					FlxG.sound.music.stop();
+						vocals.stop();
+						FlxG.sound.music.stop();
 	
-					openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this));
-					for (tween in modchartTweens) {
-						tween.active = true;
+	
+						openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this));
+						for (tween in modchartTweens) {
+							tween.active = true;
+						}
+						for (timer in modchartTimers) {
+							timer.active = true;
+						}
+	
+						// MusicBeatState.switchState(new GameOverState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+		
+						#if desktop
+						// Game Over doesn't get his own variable because it's only used here
+						DiscordClient.changePresence("Game Over - " + detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
+						#end
+						isDead = true;
+						return true;
 					}
-					for (timer in modchartTimers) {
-						timer.active = true;
-					}
-	
-					// MusicBeatState.switchState(new GameOverState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
-	
-					#if desktop
-					// Game Over doesn't get his own variable because it's only used here
-					DiscordClient.changePresence("Game Over - " + detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
-					#end
-					isDead = true;
-					return true;
 				}
-			}
 		}
 		return false;
 	}
@@ -2935,6 +2939,11 @@ class PlayState extends MusicBeatState
 				case 76:
 					if(songMisses >= 1){
 						dad.playAnim('attack');
+						dad.specialAnim = true;
+						trace("WORKED!");
+					}
+					else{
+						dad.playAnim('singUP');
 						dad.specialAnim = true;
 						trace("WORKED!");
 					}
