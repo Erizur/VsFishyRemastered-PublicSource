@@ -1425,12 +1425,6 @@ class PlayState extends MusicBeatState
 			gf.x += Math.sin(floatshit);
 		}
 
-		if (curSong == 'less-speech' && curBeat == 74){
-			if(songMisses >= 1){
-				boyfriend.playAnim('attack', true);
-			}
-		}
-
 		if(ratingString == '?') {
 			scoreTxt.text = 'Score: ' + songScore + ' | Misses: ' + songMisses + ' | Rating: ' + ratingString;
 		} else {
@@ -1857,7 +1851,7 @@ class PlayState extends MusicBeatState
 	function doDeathCheck() {
 		if (health <= 0 && !practiceMode && !isDead)
 		{
-			if (curSong == 'refreshed' && isStoryMode == true)
+			if (Paths.formatToSongPath(SONG.song) == 'refreshed' && isStoryMode == true)
 				{
 					if (curBeat >= 364)
 					{
@@ -2933,6 +2927,19 @@ class PlayState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
+
+		if (Paths.formatToSongPath(SONG.song) == 'less-speech')
+		{
+			switch(curBeat)
+			{
+				case 76:
+					if(songMisses >= 1){
+						dad.playAnim('attack');
+						dad.specialAnim = true;
+						trace("WORKED!");
+					}
+			}
+		}
 
 		if(lastBeatHit >= curBeat) {
 			trace('BEAT HIT: ' + curBeat + ', LAST HIT: ' + lastBeatHit);
