@@ -24,6 +24,12 @@ class CreditsState extends MusicBeatState
 	private var iconArray:Array<AttachedSprite> = [];
 
 	private static var creditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link - BG Color
+		['Vs Fishy Remastered Team'],
+		['Erizur', 'erizur', 'Main Programmer/Charter, Refreshed composer', 'https://youtube.com/am_erizur', 	0xE6E6E6],
+		['Devianator', 'dev', 'Main Artist for the mod', 'https://www.youtube.com/channel/UCcaYOWO98UIsJ54t_aV6JHw', 	0xE6E6E6],
+		['Pastel', 'pastel', 'Main Composer for the mod', 'https://twitter.com/SherbetIndigo', 	0xE6E6E6],
+		['T5mpler', 't5', 'Programmer for the mod, Walkeing composer', 'https://www.youtube.com/c/T5mpler', 	0xE6E6E6],
+		[''],
 		['Psych Engine Team'],
 		['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',					'https://twitter.com/Shadow_Mario_',	0xFFFFDD33],
 		['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',				'https://twitter.com/river_oaken',		0xFFC30085],
