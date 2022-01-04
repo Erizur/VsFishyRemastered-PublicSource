@@ -26,7 +26,11 @@ class Achievements {
 		["Hyperactive",					"Finish a Song without going Idle.",					false],
 		["Just the Two of Us",			"Finish a Song pressing only two keys.",				false],
 		["Toaster Gamer",				"Have you tried to run the game on a toaster?",			false],
-		["Debugger",					"Beat the \"Test\" Stage from the Chart Editor.",		 true]
+		["Debugger",					"Beat the \"Test\" Stage from the Chart Editor.",		 true],
+		["Voicebox'd",					"Get the Voice Box ending.", 							 false],
+		["#RIPBOZO",					"Kill Fishy.", 							 				 false],
+		["Safe for now",				"Get the No Battery ending.", 					     	false],
+		["I sure love pain!",			"Finish Fish-Box.", 							 		false]
 	];
 
 	public static var achievementsUnlocked:Array<Dynamic> = [ //Save string and Achievement tag + is it unlocked?
@@ -45,7 +49,11 @@ class Achievements {
 		['hype', false],				//12
 		['two_keys', false],			//13
 		['toastie', false],				//14
-		['debugger', false], 			//15
+		['debugger', false],			//15
+		['voice_ending', false],		//FISHY ENDINGS START HERE
+		['ripbozo', false],
+		['no_battery', false],
+		['fishbox_ending', false]
 	];
 
 	public static var henchmenDeath:Int = 0;
