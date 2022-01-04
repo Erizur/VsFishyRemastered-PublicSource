@@ -674,6 +674,8 @@ class PlayState extends MusicBeatState
 			{
 				default:
 					startCountdown();
+				case 'fishy-tank':
+					startVideo('fishyCutscene1');
 			}
 			seenCutscene = true;
 		} else {
@@ -2940,11 +2942,15 @@ class PlayState extends MusicBeatState
 					if(songMisses >= 1){
 						dad.playAnim('attack');
 						dad.specialAnim = true;
+						boyfriend.playAnim('dies');
+						boyfriend.specialAnim = true;
+						FlxG.sound.play(Paths.sound('shat'), 0.6);
 						trace("WORKED!");
 					}
 					else{
 						dad.playAnim('singUP');
 						dad.specialAnim = true;
+						FlxG.sound.play(Paths.sound('beeSFX'), 0.6);
 						trace("WORKED!");
 					}
 			}

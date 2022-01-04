@@ -1,103 +1,114 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				1,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Fish Left Note"
+			"fps": 24,
+			"name": "Fish Left Note",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Fish Down Note"
+			"fps": 24,
+			"name": "Fish Down Note",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-6,
 				5
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Fish Up Note"
+			"fps": 24,
+			"name": "Fish Up Note",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-14,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Fish Right Note"
+			"fps": 24,
+			"name": "Fish Right Note",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "Fish Idle",
-			"indices": []
+			"indices": [],
+			"name": "Fish Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"fps": 24,
-			"name": "Fish Idle",
-			"indices": []
+			"indices": [],
+			"name": "Fish Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUPmiss",
-			"fps": 24,
-			"name": "Fish Idle",
-			"indices": []
+			"indices": [],
+			"name": "Fish Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWNmiss",
-			"fps": 24,
-			"name": "Fish Idle",
-			"indices": []
+			"indices": [],
+			"name": "Fish Idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "singLEFTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "Fish Idle",
-			"indices": []
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "Fish Idle"
+		},
+		{
+			"offsets": [
+				27,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "dies",
+			"loop": false,
+			"name": "Fish Dies"
 		}
 	],
 	"no_antialiasing": false,
