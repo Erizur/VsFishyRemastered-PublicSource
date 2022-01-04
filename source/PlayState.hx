@@ -2212,7 +2212,7 @@ class PlayState extends MusicBeatState
 		if(achievementObj != null) {
 			return;
 		} else {
-			var achieve:Int = checkForAchievement([1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 15]);
+			var achieve:Int = checkForAchievement([1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 15, 16, 17, 18, 19]);
 			if(achieve > -1) {
 				startAchievement(achieve);
 				return;
@@ -2226,6 +2226,15 @@ class PlayState extends MusicBeatState
 		#else
 		var ret:Dynamic = FunkinLua.Function_Continue;
 		#end
+
+		if (SONG.song.toLowerCase() == 'less-speech' && isStoryMode)
+		{
+			FlxG.save.data.lessSpeechComplete = true;
+		}
+		if (SONG.song.toLowerCase() == 'unspeakable' && isStoryMode)
+		{
+			FlxG.save.data.unspeakableComplete = true;
+		}
 
 		if(ret != FunkinLua.Function_Stop && !transitioning) {
 			if (SONG.validScore)
@@ -2945,6 +2954,7 @@ class PlayState extends MusicBeatState
 						boyfriend.playAnim('dies');
 						boyfriend.specialAnim = true;
 						FlxG.sound.play(Paths.sound('shat'), 0.6);
+						endSong();
 						trace("WORKED!");
 					}
 					else{
@@ -3143,6 +3153,13 @@ class PlayState extends MusicBeatState
 						if(/*ClientPrefs.framerate <= 60 &&*/ ClientPrefs.lowQuality && !ClientPrefs.globalAntialiasing && !ClientPrefs.imagesPersist) {
 							Achievements.unlockAchievement(arrayIDs[i]);
 							return arrayIDs[i];
+						}
+					case 16:
+						if(!usedPractice && !cpuControlled) {
+							if(isStoryMode && Paths.formatToSongPath(SONG.song) == 'unspeakable') {
+								Achievements.unlockAchievement(arrayIDs[i]);
+								return arrayIDs[i];
+							}
 						}
 				}
 			}
