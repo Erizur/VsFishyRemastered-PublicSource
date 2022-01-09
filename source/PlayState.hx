@@ -3161,6 +3161,27 @@ class PlayState extends MusicBeatState
 								return arrayIDs[i];
 							}
 						}
+					case 17:
+						if(!usedPractice && !cpuControlled) {
+							if(isStoryMode && Paths.formatToSongPath(SONG.song) == 'less-speech' && songMisses >= 1) {
+								Achievements.unlockAchievement(arrayIDs[i]);
+								return arrayIDs[i];
+							}
+						}
+					case 18:
+						if(!usedPractice && !cpuControlled) {
+							if(isStoryMode && Paths.formatToSongPath(SONG.song) == 'less-speech' && songMisses == 0) {
+								Achievements.unlockAchievement(arrayIDs[i]);
+								return arrayIDs[i];
+							}
+						}
+					case 19:
+						if(!usedPractice && !cpuControlled) {
+							if(isStoryMode && Paths.formatToSongPath(SONG.song) == 'fish-box') {
+								Achievements.unlockAchievement(arrayIDs[i]);
+								return arrayIDs[i];
+							}
+						}
 				}
 			}
 		}
