@@ -676,6 +676,8 @@ class PlayState extends MusicBeatState
 					startCountdown();
 				case 'fishy-tank':
 					startVideo('fishyCutscene1');
+				case 'underwater':
+					startVideo('fishyCutscene2');
 			}
 			seenCutscene = true;
 		} else {
