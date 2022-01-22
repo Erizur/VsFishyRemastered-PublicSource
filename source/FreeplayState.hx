@@ -119,9 +119,11 @@ class FreeplayState extends MusicBeatState
 		{
 			if(songs[i].songName.toLowerCase() == "less-speech"){
 				if(FlxG.save.data.lessSpeechComplete == true){
-					var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName, true, false);
+					var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName, true, false, 0.05, 1, true);
 					songText.isMenuItem = true;
 					songText.targetY = i;
+					songText.screenCenter(X);
+					songText.x = songText.x - 240;
 					grpSongs.add(songText);
 
 					Paths.currentModDirectory = songs[i].folder;
@@ -138,15 +140,17 @@ class FreeplayState extends MusicBeatState
 			}
 			else if(songs[i].songName.toLowerCase() == "unspeakable"){
 				if(FlxG.save.data.unspeakableComplete == true){
-					var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName, true, false);
+					var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName, true, false, 0.05, 1, true);
 					songText.isMenuItem = true;
 					songText.targetY = i;
+					songText.screenCenter(X);
+					songText.x = songText.x - 240;
 					grpSongs.add(songText);
 
 					Paths.currentModDirectory = songs[i].folder;
 					var icon:HealthIcon = new HealthIcon(songs[i].songCharacter);
 					icon.sprTracker = songText;
-		
+
 					// using a FlxGroup is too much fuss!
 					iconArray.push(icon);
 					add(icon);
@@ -156,11 +160,13 @@ class FreeplayState extends MusicBeatState
 				}
 			}
 			else{
-				var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName, true, false);
+				var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName, true, false, 0.05, 1, true);
 				songText.isMenuItem = true;
 				songText.targetY = i;
+				songText.screenCenter(X);
+				songText.x = songText.x - 240;
 				grpSongs.add(songText);
-	
+
 				Paths.currentModDirectory = songs[i].folder;
 				var icon:HealthIcon = new HealthIcon(songs[i].songCharacter);
 				icon.sprTracker = songText;

@@ -40,13 +40,14 @@ class Alphabet extends FlxSpriteGroup
 	var splitWords:Array<String> = [];
 
 	var isBold:Bool = false;
+	var isFreeplay:Bool = false;
 	public var lettersArray:Array<AlphaCharacter> = [];
 
 	public var finishedText:Bool = false;
 	public var typed:Bool = false;
 
 	public var typingSpeed:Float = 0.05;
-	public function new(x:Float, y:Float, text:String = "", ?bold:Bool = false, typed:Bool = false, ?typingSpeed:Float = 0.05, ?textSize:Float = 1)
+	public function new(x:Float, y:Float, text:String = "", ?bold:Bool = false, typed:Bool = false, ?typingSpeed:Float = 0.05, ?textSize:Float = 1, ?freeplay:Bool = false)
 	{
 		super(x, y);
 		forceX = Math.NEGATIVE_INFINITY;
@@ -56,6 +57,7 @@ class Alphabet extends FlxSpriteGroup
 		this.text = text;
 		this.typed = typed;
 		isBold = bold;
+		isFreeplay = freeplay;
 
 		if (text != "")
 		{
@@ -340,7 +342,12 @@ class Alphabet extends FlxSpriteGroup
 			if(forceX != Math.NEGATIVE_INFINITY) {
 				x = forceX;
 			} else {
-				x = FlxMath.lerp(x, (targetY * 20) + 90 + xAdd, lerpVal);
+				if(isFreeplay){
+
+				}
+				else{
+					x = FlxMath.lerp(x, (targetY * 20) + 90 + xAdd, lerpVal);
+				}
 			}
 		}
 
