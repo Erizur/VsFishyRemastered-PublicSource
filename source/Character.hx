@@ -115,11 +115,14 @@ class Character extends FlxSprite
 				var rawJson = Assets.getText(path);
 				#end
 
+				var lmao:String = "shared";
+				if (character == "bf") {lmao = "preload";}
+
 				var json:CharacterFile = cast Json.parse(rawJson);
 				if(Assets.exists(Paths.getPath('images/' + json.image + '.txt', TEXT))) {
-					frames = Paths.getPackerAtlas(json.image);
+					frames = Paths.getPackerAtlas(json.image, lmao);
 				} else {
-					frames = Paths.getSparrowAtlas(json.image);
+					frames = Paths.getSparrowAtlas(json.image, lmao);
 				}
 				imageFile = json.image;
 
