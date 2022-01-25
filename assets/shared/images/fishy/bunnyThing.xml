@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bunnyThing.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bunnythingie0000" x="15" y="15" width="323" height="374" frameX="-29" frameY="0" frameWidth="381" frameHeight="374"/>
+	<SubTexture name="bunnythingie0001" x="15" y="15" width="323" height="374" frameX="-29" frameY="0" frameWidth="381" frameHeight="374"/>
+	<SubTexture name="bunnythingie0002" x="353" y="15" width="351" height="363" frameX="-15" frameY="-11" frameWidth="381" frameHeight="374"/>
+	<SubTexture name="bunnythingie0003" x="353" y="15" width="351" height="363" frameX="-15" frameY="-11" frameWidth="381" frameHeight="374"/>
+	<SubTexture name="bunnythingie0004" x="719" y="15" width="359" height="353" frameX="-11" frameY="-21" frameWidth="381" frameHeight="374"/>
+	<SubTexture name="bunnythingie0005" x="1093" y="15" width="381" height="322" frameX="0" frameY="-52" frameWidth="381" frameHeight="374"/>
+	<SubTexture name="bunnythingie0006" x="1093" y="15" width="381" height="322" frameX="0" frameY="-52" frameWidth="381" frameHeight="374"/>
+	<SubTexture name="bunnythingie0007" x="1093" y="15" width="381" height="322" frameX="0" frameY="-52" frameWidth="381" frameHeight="374"/>
+	<SubTexture name="bunnythingie0008" x="1093" y="15" width="381" height="322" frameX="0" frameY="-52" frameWidth="381" frameHeight="374"/>
+	<SubTexture name="bunnythingie0009" x="1093" y="15" width="381" height="322" frameX="0" frameY="-52" frameWidth="381" frameHeight="374"/>
+	<SubTexture name="bunnythingie0010" x="1093" y="15" width="381" height="322" frameX="0" frameY="-52" frameWidth="381" frameHeight="374"/>
+	<SubTexture name="bunnythingie0011" x="1489" y="15" width="347" height="335" frameX="-17" frameY="-39" frameWidth="381" frameHeight="374"/>
+	<SubTexture name="bunnythingie0012" x="1489" y="15" width="347" height="335" frameX="-17" frameY="-39" frameWidth="381" frameHeight="374"/>
+	<SubTexture name="bunnythingie0013" x="15" y="404" width="321" height="360" frameX="-30" frameY="-14" frameWidth="381" frameHeight="374"/>
+	<SubTexture name="bunnythingie0014" x="15" y="404" width="321" height="360" frameX="-30" frameY="-14" frameWidth="381" frameHeight="374"/>
+</TextureAtlas>

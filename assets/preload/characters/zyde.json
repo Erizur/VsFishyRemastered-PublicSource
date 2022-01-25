@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-40,
+				120
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Zyde Idle"
+		},
+		{
+			"offsets": [
+				-24,
+				120
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Zyde Right Note"
+		},
+		{
+			"offsets": [
+				-79,
+				130
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Zyde Left Note"
+		},
+		{
+			"offsets": [
+				30,
+				40
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Zyde Down Note"
+		},
+		{
+			"offsets": [
+				-216,
+				447
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Zyde Up Note"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Zyde_Joke",
+	"position": [
+		0,
+		345
+	],
+	"healthicon": "zyde",
+	"flip_x": false,
+	"healthbar_colors": [
+		80,
+		80,
+		80
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

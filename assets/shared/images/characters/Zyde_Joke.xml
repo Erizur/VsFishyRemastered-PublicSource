@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Zyde_Joke.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Zyde Down Note0000" x="15" y="15" width="544" height="416"/>
+	<SubTexture name="Zyde Idle0000" x="574" y="15" width="449" height="511"/>
+	<SubTexture name="Zyde Left Note0000" x="1038" y="15" width="309" height="511"/>
+	<SubTexture name="Zyde Right Note0000" x="1362" y="15" width="453" height="511"/>
+	<SubTexture name="Zyde Up Note0000" x="1830" y="15" width="129" height="858"/>
+</TextureAtlas>
