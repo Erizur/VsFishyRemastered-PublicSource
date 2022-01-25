@@ -405,6 +405,25 @@ class PlayState extends MusicBeatState
 				SONG.speed = FlxG.random.float(3.5, 3.9);
 				speedNumb = SONG.speed;
 				trace('scroll speed: ' + speedNumb);
+			case 'zyde-room':
+				var bg:BGSprite = new BGSprite('fishy/coolRoom', -400, -150);
+				bg.setGraphicSize(Std.int(bg.width * 1.70));
+				bg.updateHitbox();
+				add(bg);
+
+				SONG.speed = FlxG.random.float(3.1, 3.6);
+				speedNumb = SONG.speed;
+				trace('scroll speed: ' + speedNumb);
+			case 'cave-course':
+				var bg:BGSprite = new BGSprite('fishy/caveCourse', -400, -150);
+				bg.setGraphicSize(Std.int(bg.width * 1.25));
+				bg.updateHitbox();
+				add(bg);
+
+				SONG.speed = FlxG.random.float(3.1, 3.6);
+				speedNumb = SONG.speed;
+				trace('scroll speed: ' + speedNumb);
+
 		}
 
 

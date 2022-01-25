@@ -10,3 +10,5 @@ petShop
 petShop-destroy
 park-day
 park-night
+zyde-room
+cave-course
