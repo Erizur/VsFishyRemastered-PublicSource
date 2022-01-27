@@ -178,6 +178,7 @@ class PlayState extends MusicBeatState
 	var dialogueJson:DialogueFile = null;
 
 	var fishyAnimals:BGSprite;
+	var sadFish:BGSprite;
 	var fence:BGSprite;
 	var bunny:BGSprite;
 
@@ -382,6 +383,10 @@ class PlayState extends MusicBeatState
 				bg.setGraphicSize(Std.int(bg.width * 0.75));
 				bg.updateHitbox();
 				add(bg);
+
+				sadFish = new BGSprite('fishy/fishySad_BG', 150, 225, 1, 1, ['Fish Sad'], true);
+				sadFish.dance(true);
+				add(sadFish);
 
 				SONG.speed = FlxG.random.float(3.3, 3.7);
 				speedNumb = SONG.speed;

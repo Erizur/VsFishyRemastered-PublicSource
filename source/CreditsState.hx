@@ -26,9 +26,18 @@ class CreditsState extends MusicBeatState
 	private static var creditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link - BG Color
 		['Vs Fishy Remastered Team'],
 		['Erizur', 'erizur', 'Main Programmer/Charter, Refreshed composer', 'https://youtube.com/am_erizur', 	0xFFE6E6E6],
-		['Devianator', 'dev', 'Main Artist for the mod', 'https://www.youtube.com/channel/UCcaYOWO98UIsJ54t_aV6JHw', 	0xFFE6E6E6],
-		['Pastel', 'pastel', 'Main Composer for the mod', 'https://twitter.com/SherbetIndigo', 	0xFFE6E6E6],
-		['T5mpler', 't5', 'Programmer for the mod, Walkeing composer', 'https://www.youtube.com/c/T5mpler', 	0xFFE6E6E6],
+		['Devianator', 'dev', 'Main Artist for the mod', 'https://www.youtube.com/channel/UCcaYOWO98UIsJ54t_aV6JHw', 	0xFF9494b8],
+		['Pastel', 'pastel', 'Main Composer for the mod', 'https://twitter.com/SherbetIndigo', 	0xFF1ab2ff],
+		['T5mpler', 't5', 'Programmer for the mod, Walkeing composer', 'https://www.youtube.com/c/T5mpler', 	0xFFcc6600],
+		['Cuzsie', 'cuzsie', 'Playtester, Fish-Box modchart creator', 'https://twitter.com/cuzsiedev', 	0xFF00cc00],
+		[''],
+		['Playtesters'],
+		['1_nugget_2', 'nugget', 'Playtester, emotional support (for the funnies)', 'https://www.instagram.com/1_nugget_2', 0xFF3366ff],
+		['OptimumCashew', 'optimum', 'Playtester, cool streamer', 'https://www.twitch.tv/optimumcashew', 0xFF7F00FF],
+		['Foxnap', 'foxnap', 'Playtester, funny guy', 'https://twitter.com/Foxnap2', 0xFF990033],
+		[''],
+		["What's this?"],
+		['Zyde', 'erizur', 'Trigger the fun games', 'fungames', 0xFFE6E6E6],
 		[''],
 		['Psych Engine Team'],
 		['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',					'https://twitter.com/Shadow_Mario_',	0xFFFFDD33],
@@ -46,9 +55,7 @@ class CreditsState extends MusicBeatState
 		['ninjamuffin99',		'ninjamuffin99',	"Programmer of Friday Night Funkin'",				'https://twitter.com/ninja_muffin99',	0xFFF73838],
 		['PhantomArcade',		'phantomarcade',	"Animator of Friday Night Funkin'",					'https://twitter.com/PhantomArcade3K',	0xFFFFBB1B],
 		['evilsk8r',			'evilsk8r',			"Artist of Friday Night Funkin'",					'https://twitter.com/evilsk8r',			0xFF53E52C],
-		['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",					'https://twitter.com/kawaisprite',		0xFF6475F3],
-		["What's this?!"],
-		['Zyde', 'erizur', "Trigger the fun games", 'fungames', 0xFFFFDD33]
+		['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",					'https://twitter.com/kawaisprite',		0xFF6475F3]
 	];
 
 	var bg:FlxSprite;
