@@ -10,7 +10,7 @@ class StrumNote extends FlxSprite
 {
 	private var colorSwap:ColorSwap;
 	public var resetAnim:Float = 0;
-	private var noteData:Int = 0;
+	public var noteData:Int = 0;
 
 	private var player:Int;
 
