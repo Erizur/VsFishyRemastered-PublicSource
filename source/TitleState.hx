@@ -52,6 +52,8 @@ class TitleState extends MusicBeatState
 	var easterEggKeyCombination:Array<FlxKey> = [FlxKey.B, FlxKey.B]; //bb stands for bbpanzu cuz he wanted this lmao
 	var lastKeysPressed:Array<FlxKey> = [];
 
+	var numberOfTimesPressed:Int = 0;
+
 	override public function create():Void
 	{
 		#if (polymod && !html5)
@@ -274,6 +276,7 @@ class TitleState extends MusicBeatState
 		}
 
 		var pressedEnter:Bool = FlxG.keys.justPressed.ENTER;
+		var pressedSpace:Bool = FlxG.keys.justPressed.SPACE;
 
 		#if mobile
 		for (touch in FlxG.touches.list)
@@ -318,6 +321,19 @@ class TitleState extends MusicBeatState
 					closedState = true;
 				});
 				// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
+			}
+			else if(pressedSpace){
+				numberOfTimesPressed++;
+				if(numberOfTimesPressed >= 10){
+					var songLowercase:String = Paths.formatToSongPath("rushe");
+            		var sn:String = Highscore.formatSong(songLowercase, 0);
+            		trace(sn);
+
+            		PlayState.SONG = Song.loadFromJson(sn, songLowercase);
+            		PlayState.isStoryMode = false;
+            		PlayState.storyDifficulty = 0;
+                	LoadingState.loadAndSwitchState(new PlayState());
+				}
 			}
 			else if(easterEggEnabled)
 			{

@@ -179,6 +179,7 @@ class PlayState extends MusicBeatState
 
 	var fishyAnimals:BGSprite;
 	var fence:BGSprite;
+	var bunny:BGSprite;
 
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
@@ -328,6 +329,12 @@ class PlayState extends MusicBeatState
 				stageFront.updateHitbox();
 				add(stageFront);
 
+				if(Paths.formatToSongPath(SONG.song) != 'tutorial'){
+					SONG.speed = FlxG.random.float(3.1, 3.6);
+					speedNumb = SONG.speed;
+					trace('scroll speed: ' + speedNumb);
+				}
+
 				if(!ClientPrefs.lowQuality) {
 					var stageLight:BGSprite = new BGSprite('stage_light', -125, -100, 0.9, 0.9);
 					stageLight.setGraphicSize(Std.int(stageLight.width * 1.1));
@@ -389,8 +396,8 @@ class PlayState extends MusicBeatState
 				trees.updateHitbox();
 				add(trees);
 
-				fence = new BGSprite('fishy/ParkFence', -250, 350, 1, 1, ['ParkBG2'], false);
-				fence.dance();
+				fence = new BGSprite('fishy/ParkFence', -250, 350, 1, 1, ['ParkBG2'], true);
+				fence.dance(true);
 				add(fence);
 
 				SONG.speed = FlxG.random.float(3.1, 3.6);
@@ -419,6 +426,13 @@ class PlayState extends MusicBeatState
 				bg.setGraphicSize(Std.int(bg.width * 1.25));
 				bg.updateHitbox();
 				add(bg);
+
+				bunny = new BGSprite('fishy/bunnyThing', BF_X + 380, BF_Y + 390, 1, 1, ['bunnythingie'], true);
+				bunny.dance(true);
+				add(bunny);
+
+				defaultCamZoom = 0.8;
+				FlxG.camera.zoom = defaultCamZoom;
 
 				SONG.speed = FlxG.random.float(3.1, 3.6);
 				speedNumb = SONG.speed;
@@ -697,6 +711,16 @@ class PlayState extends MusicBeatState
 					startVideo('fishyCutscene1');
 				case 'underwater':
 					startVideo('fishyCutscene2');
+				case 'less-speech':
+					startVideo('fishyCutscene4');
+				case 'unspeakable':
+					startVideo('fishyCutscene3');
+				case 'walkeing':
+					startVideo('fishyCutscene5');
+				case 'refreshed':
+					startVideo('fishyCutscene6');
+				case 'fish-box':
+					startVideo('fishyCutscene7');
 			}
 			seenCutscene = true;
 		} else {
@@ -1493,14 +1517,16 @@ class PlayState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.SEVEN && !endingSong && !inCutscene)
 		{
-			persistentUpdate = false;
-			paused = true;
-			cancelFadeTween();
-			CustomFadeTransition.nextCamera = camOther;
-			MusicBeatState.switchState(new ChartingState());
+			#if debug
+				persistentUpdate = false;
+				paused = true;
+				cancelFadeTween();
+				CustomFadeTransition.nextCamera = camOther;
+				MusicBeatState.switchState(new ChartingState());
 
-			#if desktop
-			DiscordClient.changePresence("Chart Editor", null, null, true);
+				#if desktop
+				DiscordClient.changePresence("Chart Editor", null, null, true);
+				#end
 			#end
 		}
 
@@ -2647,7 +2673,7 @@ class PlayState extends MusicBeatState
 
 							}
 						}
-						else if (canMiss) 
+						else if (canMiss)
 							ghostMiss(controlArray[i], i, true);
 
 						// I dunno what you need this for but here you go

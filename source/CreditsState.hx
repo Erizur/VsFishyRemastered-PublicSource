@@ -46,7 +46,9 @@ class CreditsState extends MusicBeatState
 		['ninjamuffin99',		'ninjamuffin99',	"Programmer of Friday Night Funkin'",				'https://twitter.com/ninja_muffin99',	0xFFF73838],
 		['PhantomArcade',		'phantomarcade',	"Animator of Friday Night Funkin'",					'https://twitter.com/PhantomArcade3K',	0xFFFFBB1B],
 		['evilsk8r',			'evilsk8r',			"Artist of Friday Night Funkin'",					'https://twitter.com/evilsk8r',			0xFF53E52C],
-		['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",					'https://twitter.com/kawaisprite',		0xFF6475F3]
+		['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",					'https://twitter.com/kawaisprite',		0xFF6475F3],
+		["What's this?!"],
+		['Zyde', 'erizur', "Trigger the fun games", 'fungames', 0xFFFFDD33]
 	];
 
 	var bg:FlxSprite;
@@ -132,7 +134,19 @@ class CreditsState extends MusicBeatState
 			MusicBeatState.switchState(new MainMenuState());
 		}
 		if(controls.ACCEPT) {
-			CoolUtil.browserLoad(creditsStuff[curSelected][3]);
+			if(creditsStuff[curSelected][3] == "fungames") {
+                var songLowercase:String = Paths.formatToSongPath("fungames");
+            	var sn:String = Highscore.formatSong(songLowercase, 0);
+            	trace(sn);
+
+            	PlayState.SONG = Song.loadFromJson(sn, songLowercase);
+            	PlayState.isStoryMode = false;
+            	PlayState.storyDifficulty = 0;
+                LoadingState.loadAndSwitchState(new PlayState());
+            }
+			else{
+                CoolUtil.browserLoad(creditsStuff[curSelected][3]);
+            }
 		}
 		super.update(elapsed);
 	}

@@ -148,10 +148,25 @@ class MainMenuState extends MusicBeatState
 		switch (character.curCharacter)
 		{
 			case "gf":
-				character.x = character.x - 100;
-				character.y = character.x + 200;
+				character.x = character.x + 280;
+				character.y = character.y - 220;
 			case "bf":
-				character.x = character.x + 350;
+				character.x = character.x + 375;
+				character.y = character.y - 100;
+				character.scale.x = 1.2;
+				character.scale.y = 1.2;
+			case "fishy":
+				character.x = character.x + 380;
+				character.y = character.y - 50;
+				character.scale.x = 1.3;
+				character.scale.y = 1.3;
+				character.flipX = true;
+			case "voicebox":
+				character.x = character.x + 480;
+				character.y = character.y - 100;
+				character.scale.x = 1.5;
+				character.scale.y = 1.5;
+				character.flipX = true;
 		}
 		
 

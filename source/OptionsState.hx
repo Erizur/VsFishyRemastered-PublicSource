@@ -688,10 +688,11 @@ class PreferencesSubstate extends MusicBeatSubstate
 		'Hide HUD',
 		'Hide Song Length',
 		'Flashing Lights',
-		'Camera Zooms'
+		'Camera Zooms',
 		#if !mobile
-		,'FPS Counter'
+		'FPS Counter',
 		#end
+		'Cave Course'
 	];
 
 	private var grpOptions:FlxTypedGroup<Alphabet>;
@@ -876,6 +877,15 @@ class PreferencesSubstate extends MusicBeatSubstate
 					
 					case 'Hide Song Length':
 						ClientPrefs.hideTime = !ClientPrefs.hideTime;
+					case 'Cave Course':
+						var songLowercase:String = Paths.formatToSongPath("cave");
+            			var sn:String = Highscore.formatSong(songLowercase, 0);
+            			trace(sn);
+
+            			PlayState.SONG = Song.loadFromJson(sn, songLowercase);
+            			PlayState.isStoryMode = false;
+            			PlayState.storyDifficulty = 0;
+                		LoadingState.loadAndSwitchState(new PlayState());
 				}
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				reloadValues();
@@ -969,6 +979,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "If checked, hides most HUD elements.";
 			case 'Hide Song Length':
 				daText = "If checked, the bar showing how much time is left\nwill be hidden.";
+			case 'Cave Course':
+				daText = "The first step on the road to becoming a Magician is to form a strong bond with your Familiar!";
 		}
 		descText.text = daText;
 
