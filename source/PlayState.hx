@@ -1410,6 +1410,21 @@ class PlayState extends MusicBeatState
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
 	var limoSpeed:Float = 0;
+	
+	
+	var crazyNote1:Float = 0;
+	var crazyNote2:Float = 0;
+	var crazyNote3:Float = 0;
+	var crazyNote4:Float = 0;
+
+
+	var daMoves:Array<Float> = 
+	[
+		0,
+		0,
+		0,
+		0
+	];
 
 	override public function update(elapsed:Float)
 	{
@@ -1417,6 +1432,8 @@ class PlayState extends MusicBeatState
 		{
 			iconP1.swapOldIcon();
 		}*/
+
+		
 
 		callOnLuas('onUpdate', [elapsed]);
 
