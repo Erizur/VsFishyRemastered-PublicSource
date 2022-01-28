@@ -23,13 +23,23 @@ class FlashingState extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
 
-		warnText = new FlxText(0, 0, FlxG.width,
-			"Hey, watch out!\n
-			This Mod contains shaking effects!\n
-			Press ENTER to disable them now or go to Options Menu.\n
-			Press ESCAPE to ignore this message.\n
-			You've been warned!",
-			32);
+		#if html5
+			warnText = new FlxText(0, 0, FlxG.width,
+				"Hello there!\n
+				It looks like you are playing on a website!\n
+				Please download the original mod on the GameBanana site.\n
+				You will experience lag issues due to this.\n
+				You've been warned!",
+				32);
+		#else
+			warnText = new FlxText(0, 0, FlxG.width,
+				"Hey, watch out!\n
+				This Mod contains nothing, just a funny fish\n
+				Anyways, thank you for downloading this mod!\n
+				This took a lot of months of work and I hope you can enjoy this!\n
+				Good luck!",
+				32);
+		#end
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
 		add(warnText);
@@ -44,8 +54,6 @@ class FlashingState extends MusicBeatState
 				FlxTransitionableState.skipNextTransIn = true;
 				FlxTransitionableState.skipNextTransOut = true;
 				if(!back) {
-					ClientPrefs.flashing = false;
-					ClientPrefs.saveSettings();
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 					FlxFlicker.flicker(warnText, 1, 0.1, false, true, function(flk:FlxFlicker) {
 						new FlxTimer().start(0.5, function (tmr:FlxTimer) {

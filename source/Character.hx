@@ -254,7 +254,7 @@ class Character extends FlxSprite
 	 */
 	public function dance()
 	{
-		if (!debugMode && !specialAnim)
+		if (!specialAnim)
 		{
 			if(danceIdle)
 			{

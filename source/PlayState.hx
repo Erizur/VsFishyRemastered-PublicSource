@@ -2322,8 +2322,13 @@ class PlayState extends MusicBeatState
 
 				storyPlaylist.remove(storyPlaylist[0]);
 
+				if(Paths.formatToSongPath(SONG.song) == 'fish-box') {
+					startVideo("fishyFinalCutscene");
+				}
+
 				if (storyPlaylist.length <= 0 || Paths.formatToSongPath(SONG.song) == 'less-speech' || Paths.formatToSongPath(SONG.song) == 'unspeakable')
 				{
+
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
 					cancelFadeTween();
@@ -3023,6 +3028,12 @@ class PlayState extends MusicBeatState
 						boyfriend.playAnim('dies');
 						boyfriend.specialAnim = true;
 						FlxG.sound.play(Paths.sound('shat'), 0.6);
+						new FlxTimer().start(0.5, function(tmr:FlxTimer)
+							{
+								var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
+								black.scrollFactor.set();
+								add(black);
+							});
 						endSong();
 						trace("WORKED!");
 					}
@@ -3032,6 +3043,14 @@ class PlayState extends MusicBeatState
 						FlxG.sound.play(Paths.sound('beeSFX'), 0.6);
 						trace("WORKED!");
 					}
+			}
+		}
+		else if(Paths.formatToSongPath(SONG.song) == 'refreshed'){
+			switch(curBeat){
+				case 365:
+					var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
+					black.scrollFactor.set();
+					add(black);
 			}
 		}
 

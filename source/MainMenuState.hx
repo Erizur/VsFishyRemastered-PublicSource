@@ -150,23 +150,28 @@ class MainMenuState extends MusicBeatState
 			case "gf":
 				character.x = character.x + 280;
 				character.y = character.y - 220;
+				character.danceIdle = true;
+				character.dance();
 			case "bf":
 				character.x = character.x + 375;
 				character.y = character.y - 100;
 				character.scale.x = 1.2;
 				character.scale.y = 1.2;
+				character.dance();
 			case "fishy":
 				character.x = character.x + 380;
 				character.y = character.y - 50;
 				character.scale.x = 1.3;
 				character.scale.y = 1.3;
 				character.flipX = true;
+				character.dance();
 			case "voicebox":
 				character.x = character.x + 480;
 				character.y = character.y - 100;
 				character.scale.x = 1.5;
 				character.scale.y = 1.5;
 				character.flipX = true;
+				character.dance();
 		}
 		
 
