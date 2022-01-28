@@ -384,7 +384,7 @@ class PlayState extends MusicBeatState
 				bg.updateHitbox();
 				add(bg);
 
-				sadFish = new BGSprite('fishy/fishySad_BG', DAD_X - 100, DAD_Y + 380, 1, 1, ['Fish Sad'], true);
+				sadFish = new BGSprite('fishy/fishySad_BG', DAD_X - 100, DAD_Y + 350, 1, 1, ['Fish Sad'], true);
 				sadFish.dance(true);
 				add(sadFish);
 
