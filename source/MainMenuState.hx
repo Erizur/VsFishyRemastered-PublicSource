@@ -68,6 +68,8 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
+		Conductor.changeBPM(102);
+
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
 		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('menuBG'));
 		bg.scrollFactor.set(0, yScroll);
@@ -157,6 +159,7 @@ class MainMenuState extends MusicBeatState
 				character.y = character.y - 100;
 				character.scale.x = 1.2;
 				character.scale.y = 1.2;
+				character.flipX = false;
 				character.dance();
 			case "fishy":
 				character.x = character.x + 380;
@@ -193,9 +196,9 @@ class MainMenuState extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		if (FlxG.sound.music.volume < 0.8)
-		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
-		}
+		if (FlxG.sound.music != null)
+			Conductor.songPosition = FlxG.sound.music.time;
 
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 5.6, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
@@ -311,5 +314,15 @@ class MainMenuState extends MusicBeatState
 				FlxG.log.add(spr.frameWidth);
 			}
 		});
+	}
+
+
+
+	override function beatHit()
+	{
+		super.beatHit();
+		trace("go man go");
+
+		character.dance();
 	}
 }
