@@ -29,7 +29,7 @@ class CreditsState extends MusicBeatState
 		['Devianator', 'dev', 'Main Artist for the mod', 'https://www.youtube.com/channel/UCcaYOWO98UIsJ54t_aV6JHw', 	0xFF9494b8],
 		['Pastel', 'pastel', 'Main Composer for the mod', 'https://twitter.com/SherbetIndigo', 	0xFF1ab2ff],
 		['T5mpler', 't5', 'Programmer for the mod, Walkeing composer', 'https://www.youtube.com/c/T5mpler', 	0xFFcc6600],
-		['Cuzsie', 'cuzsie', 'Playtester, Fish-Box modchart creator', 'https://twitter.com/cuzsiedev', 	0xFF00cc00],
+		['Cuzsie', 'cuzsie', 'Playtester, Programmer', 'https://twitter.com/cuzsiedev', 	0xFF00cc00],
 		[''],
 		['Playtesters'],
 		['1_nugget_2', 'nugget', 'Playtester, emotional support (for the funnies)', 'https://www.instagram.com/1_nugget_2', 0xFF3366ff],
