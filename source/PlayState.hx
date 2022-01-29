@@ -1,5 +1,6 @@
 package;
 
+import lime.system.System;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -163,6 +164,7 @@ class PlayState extends MusicBeatState
 	public static var usedPractice:Bool = false;
 	public static var changedDifficulty:Bool = false;
 	public static var cpuControlled:Bool = false;
+	public var isJumpscare:Bool = false;
 
 	var botplaySine:Float = 0;
 	var botplayTxt:FlxText;
@@ -835,9 +837,40 @@ class PlayState extends MusicBeatState
 			(new FlxVideo(fileName)).finishCallback = function() {
 				remove(bg);
 				if(endingSong) {
-					endSong();
+					if(storyPlaylist.length <= 0 && Paths.formatToSongPath(SONG.song) == 'fish-box'){
+						FlxG.sound.playMusic(Paths.music('freakyMenu'));
+						cancelFadeTween();
+						CustomFadeTransition.nextCamera = camOther;
+						if(FlxTransitionableState.skipNextTransIn) {
+							CustomFadeTransition.nextCamera = null;
+						}
+						MusicBeatState.switchState(new StoryMenuState());
+	
+							// if ()
+						if(!usedPractice) {
+							StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
+	
+							if (SONG.validScore)
+							{
+								Highscore.saveWeekScore(WeekData.getWeekFileName(), campaignScore, storyDifficulty);
+							}
+	
+							FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
+							FlxG.save.flush();
+						}
+						usedPractice = false;
+						changedDifficulty = false;
+						cpuControlled = false;
+					}
+					trace('SONG HAS ENDED');
 				} else {
-					startCountdown();
+					if(isJumpscare){
+						System.exit(0);
+					}
+					else{
+						startCountdown();
+					}
+					trace('YGHDHUASGFBSNIK');
 				}
 			}
 			return;
@@ -846,9 +879,12 @@ class PlayState extends MusicBeatState
 		}
 		#end
 		if(endingSong) {
+			seenCutscene = false;
 			endSong();
+			trace('SONG HAS ENDED');
 		} else {
 			startCountdown();
+			trace('BFDJIUNDFGIJN');
 		}
 	}
 
@@ -1944,9 +1980,7 @@ class PlayState extends MusicBeatState
 	
 						vocals.stop();
 						FlxG.sound.music.stop();
-	
-	
-						openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this));
+
 						for (tween in modchartTweens) {
 							tween.active = true;
 						}
@@ -1961,6 +1995,16 @@ class PlayState extends MusicBeatState
 						DiscordClient.changePresence("Game Over - " + detailsText, SONG.song + " (" + storyDifficultyText + ")", iconP2.getCharacter());
 						#end
 						isDead = true;
+
+						var randomGameOver:Int = FlxG.random.int(0,50);
+						trace(randomGameOver);
+						if(randomGameOver == 49) {
+							isJumpscare = true;
+							openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this, true));
+						} else {
+							openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, camFollowPos.x, camFollowPos.y, this, false));
+						}
+
 						return true;
 					}
 				}
@@ -2264,7 +2308,7 @@ class PlayState extends MusicBeatState
 				return;
 			}
 		}
-		
+
 		timeBarBG.visible = false;
 		timeBar.visible = false;
 		timeTxt.visible = false;
@@ -2276,6 +2320,7 @@ class PlayState extends MusicBeatState
 
 		deathCounter = 0;
 		seenCutscene = false;
+
 
 		#if ACHIEVEMENTS_ALLOWED
 		if(achievementObj != null) {
@@ -2322,15 +2367,12 @@ class PlayState extends MusicBeatState
 
 				storyPlaylist.remove(storyPlaylist[0]);
 
-				if(Paths.formatToSongPath(SONG.song) == 'fish-box') {
-					startVideo("fishyFinalCutscene");
+				if(storyPlaylist.length <= 0 && Paths.formatToSongPath(SONG.song) == 'fish-box' && seenCutscene == false){
+					startVideo('fishyFinalCutscene');
 				}
-
-				if (storyPlaylist.length <= 0 || Paths.formatToSongPath(SONG.song) == 'less-speech' || Paths.formatToSongPath(SONG.song) == 'unspeakable')
+				else if (storyPlaylist.length <= 0 || Paths.formatToSongPath(SONG.song) == 'less-speech' || Paths.formatToSongPath(SONG.song) == 'unspeakable')
 				{
-
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
-
 					cancelFadeTween();
 					CustomFadeTransition.nextCamera = camOther;
 					if(FlxTransitionableState.skipNextTransIn) {
@@ -2338,7 +2380,7 @@ class PlayState extends MusicBeatState
 					}
 					MusicBeatState.switchState(new StoryMenuState());
 
-					// if ()
+						// if ()
 					if(!usedPractice) {
 						StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
 
@@ -2346,7 +2388,7 @@ class PlayState extends MusicBeatState
 						{
 							Highscore.saveWeekScore(WeekData.getWeekFileName(), campaignScore, storyDifficulty);
 						}
-
+	
 						FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
 						FlxG.save.flush();
 					}
