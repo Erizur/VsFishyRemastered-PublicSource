@@ -864,7 +864,7 @@ class PlayState extends MusicBeatState
 					}
 					trace('SONG HAS ENDED');
 				} else {
-					if(isJumpscare){
+					if(isJumpscare == true){
 						System.exit(0);
 					}
 					else{
@@ -883,7 +883,12 @@ class PlayState extends MusicBeatState
 			endSong();
 			trace('SONG HAS ENDED');
 		} else {
-			startCountdown();
+			if(isJumpscare == true){
+				System.exit(0);
+			}
+			else{
+				startCountdown();
+			}
 			trace('BFDJIUNDFGIJN');
 		}
 	}
@@ -1964,6 +1969,7 @@ class PlayState extends MusicBeatState
 						{
 							if (curBeat >= 364)
 							{
+								seenCutscene = false;
 								storyPlaylist.remove(storyPlaylist[0]);
 								PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0], PlayState.storyPlaylist[0]);
 								FlxG.switchState(new PlayState());
