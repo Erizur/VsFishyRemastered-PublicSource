@@ -113,10 +113,14 @@ class TitleState extends MusicBeatState
 				DiscordClient.shutdown();
 			});
 			#end
-			new FlxTimer().start(1, function(tmr:FlxTimer)
-			{
-				startIntro();
-			});
+			#if html5
+				MusicBeatState.switchState(new FlashingState());
+			#else
+				new FlxTimer().start(1, function(tmr:FlxTimer)
+				{
+					startIntro();
+				});
+			#end
 		}
 		#end
 	}
