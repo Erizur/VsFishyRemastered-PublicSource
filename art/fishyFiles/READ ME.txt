@@ -1,3 +1,4 @@
+Message from pastel:
 All of these flps use FL Studio 20.8.3
 
 All the samples i used will be in the same folders as the flps :troll:
@@ -11,3 +12,7 @@ Less-Speach is a joke song and i doubt you'll be doing anything with it anyways
 Unspeakable uses Pianotone 600 and Nexus 2
 
 Fish Box uses Serum and Nexus 2
+
+Matching from t5mpler:
+Walkeing uses a lot of external plugins (Nexus 2, Serum, and a lot others) lol
+the samples are included with the flp though.
