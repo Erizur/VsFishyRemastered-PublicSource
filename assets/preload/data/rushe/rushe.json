@@ -4909,7 +4909,7 @@
     ],
     "bpm": 200,
     "sections": 1,
-    "needsVoices": true,
+    "needsVoices": false,
     "stage": "park-day",
     "player1": "bf",
     "player2": "fishy",
