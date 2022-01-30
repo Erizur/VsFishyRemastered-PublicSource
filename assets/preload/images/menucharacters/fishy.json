@@ -1,0 +1,11 @@
+{
+	
+	"image": "Menu_Fishy",
+	"position": [
+		45,
+		-45
+	],
+	"scale": 0.7,
+	"idle_anim": "Fish Idle Black lines",
+	"confirm_anim": "Fish Idle Black lines"
+}

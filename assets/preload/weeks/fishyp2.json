@@ -1,7 +1,7 @@
 {
 	"storyName": "fishe in the park!!!",
 	"hideFreeplay": false,
-	"weekBackground": "stage",
+	"weekBackground": "park",
 	"weekBefore": "fishyp1",
 	"freeplayColor": [
 		146,
@@ -10,7 +10,7 @@
 	],
 	"startUnlocked": true,
 	"weekCharacters": [
-		"dad",
+		"fishy",
 		"bf",
 		"gf"
 	],

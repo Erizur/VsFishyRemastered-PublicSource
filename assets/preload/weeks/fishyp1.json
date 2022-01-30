@@ -1,7 +1,7 @@
 {
 	"storyName": "amazing fishe!!",
 	"hideFreeplay": false,
-	"weekBackground": "stage",
+	"weekBackground": "petshop",
 	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
@@ -10,7 +10,7 @@
 	],
 	"startUnlocked": true,
 	"weekCharacters": [
-		"dad",
+		"fishy",
 		"bf",
 		"gf"
 	],
