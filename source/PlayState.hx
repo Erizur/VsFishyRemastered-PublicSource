@@ -2374,7 +2374,33 @@ class PlayState extends MusicBeatState
 				storyPlaylist.remove(storyPlaylist[0]);
 
 				if(storyPlaylist.length <= 0 && Paths.formatToSongPath(SONG.song) == 'fish-box' && seenCutscene == false){
-					startVideo('fishyFinalCutscene');
+					#if VIDEOS_ALLOWED
+						startVideo('fishyFinalCutscene');
+					#else
+						FlxG.sound.playMusic(Paths.music('freakyMenu'));
+						cancelFadeTween();
+						CustomFadeTransition.nextCamera = camOther;
+						if(FlxTransitionableState.skipNextTransIn) {
+							CustomFadeTransition.nextCamera = null;
+						}
+						MusicBeatState.switchState(new StoryMenuState());
+
+						// if ()
+						if(!usedPractice) {
+							StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
+
+							if (SONG.validScore)
+							{
+								Highscore.saveWeekScore(WeekData.getWeekFileName(), campaignScore, storyDifficulty);
+							}
+	
+							FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
+							FlxG.save.flush();
+						}
+						usedPractice = false;
+						changedDifficulty = false;
+						cpuControlled = false;
+					#end
 				}
 				else if (storyPlaylist.length <= 0 || Paths.formatToSongPath(SONG.song) == 'less-speech' || Paths.formatToSongPath(SONG.song) == 'unspeakable')
 				{
