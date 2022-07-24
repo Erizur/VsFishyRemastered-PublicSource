@@ -2451,7 +2451,16 @@ class PlayState extends MusicBeatState
 					}
 					else{
 						var difficulty:String = '';
-						var randomNum:Int = FlxG.random.int(0,1);
+						var randomNum:Int = 0;
+						if (FlxG.save.data.lessSpeechComplete == true && FlxG.save.data.unspeakableComplete == false){
+							randomNum = 1;
+						}
+						else if(FlxG.save.data.lessSpeechComplete == false && FlxG.save.data.unspeakableComplete == true){
+							randomNum = 0;
+						}
+						else if(FlxG.save.data.lessSpeechComplete == true && FlxG.save.data.unspeakableComplete == true || FlxG.save.data.lessSpeechComplete == false && FlxG.save.data.unspeakableComplete == false){
+							randomNum = FlxG.random.int(0,1);
+						}
 
 						trace('LOADING RANDOM FISHY P1 ENDING SONG');
 						trace(Paths.formatToSongPath(PlayState.storyPlaylist[randomNum]) + difficulty);
